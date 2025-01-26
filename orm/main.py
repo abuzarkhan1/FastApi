@@ -19,7 +19,7 @@ def get_db():
         db.close()    
 
 
-@app.get("/get")
+@app.get("/get-posts")
 def read_root(db: Session = Depends(get_db)):
     return {"status": "ok", }
 
